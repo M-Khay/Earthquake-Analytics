@@ -45,7 +45,7 @@ public class EarthquakeListActivity extends AppCompatActivity {
         APIInterface apiInterface =  APIClient.getClient().create(APIInterface.class);
 
 
-        Call<EarthquakeListData> data  = apiInterface.getRecentEarthquakeList(44,-9,22,55,"demo");
+        Call<EarthquakeListData> data  = apiInterface.getRecentEarthquakeList("44","-9","22","55","demo");
         data.enqueue(new Callback<EarthquakeListData>() {
             @Override
             public void onResponse(Call<EarthquakeListData> call, Response<EarthquakeListData> response) {

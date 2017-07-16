@@ -14,7 +14,7 @@ import retrofit2.http.Query;
 public interface APIInterface {
 
         @GET("earthquakesJSON")
-        Call<EarthquakeListData> getRecentEarthquakeList(@Query("north") int north,@Query("south") int south,@Query("east") int east,@Query("west") int west,@Query("username") String username);
+        Call<EarthquakeListData> getRecentEarthquakeList(@Query("north") String north,@Query("south") String south,@Query("east") String east,@Query("west") String west,@Query("username") String username);
 
 //        @GET("movie/{id}")
 //        Call<MoviesResponse> getMovieDetails(@Path("id") int id, @Query("api_key") String apiKey);
