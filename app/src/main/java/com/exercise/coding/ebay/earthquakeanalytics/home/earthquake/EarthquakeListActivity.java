@@ -3,14 +3,23 @@ package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.exercise.coding.ebay.earthquakeanalytics.R;
+import com.exercise.coding.ebay.earthquakeanalytics.data.model.EarthquakeListData;
+import com.exercise.coding.ebay.earthquakeanalytics.rest.APIClient;
+import com.exercise.coding.ebay.earthquakeanalytics.rest.APIInterface;
 import com.exercise.coding.ebay.earthquakeanalytics.util.ActivityUtil;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class EarthquakeListActivity extends AppCompatActivity {
 
+    private EarthquakeListPresenter mEarthListPresenter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,15 +28,6 @@ public class EarthquakeListActivity extends AppCompatActivity {
         // set up toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//      unused.
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         // create the fragment
         EarthquakeListFragment earthquakeListFragment = (EarthquakeListFragment) getSupportFragmentManager().findFragmentById(R.id.content_frame);
@@ -36,6 +36,30 @@ public class EarthquakeListActivity extends AppCompatActivity {
             earthquakeListFragment = EarthquakeListFragment.newInstance();
             ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), earthquakeListFragment, R.id.content_frame);
         }
+
+        // Create the presenter
+
+//        mEarthListPresenter  = new EarthquakeListPresenter(
+//                Injection.provideTasksRepository(getApplicationContext()), tasksFragment);
+
+        APIInterface apiInterface =  APIClient.getClient().create(APIInterface.class);
+
+
+        Call<EarthquakeListData> data  = apiInterface.getRecentEarthquakeList(44,-9,22,55,"demo");
+        data.enqueue(new Callback<EarthquakeListData>() {
+            @Override
+            public void onResponse(Call<EarthquakeListData> call, Response<EarthquakeListData> response) {
+                Log.d("Earthquake list ",response.toString());
+            }
+
+            @Override
+            public void onFailure(Call<EarthquakeListData> call, Throwable t) {
+
+            }
+        });
+
+
+
 
     }
 
@@ -53,7 +77,7 @@ public class EarthquakeListActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.about) {
             return true;
         }
         return super.onOptionsItemSelected(item);
