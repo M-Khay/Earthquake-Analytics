@@ -7,21 +7,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.exercise.coding.ebay.earthquakeanalytics.R;
+import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
+import com.exercise.coding.ebay.earthquakeanalytics.data.model.EarthquakeListData;
 import com.exercise.coding.ebay.earthquakeanalytics.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link EarthquakeListData} for Unit testing and makes a call to the
  * specified {@link EarthquakeListFragment.OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
  */
 public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<MyEatherquakeListRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Earthquake> mValues;
     private final EarthquakeListFragment.OnListFragmentInteractionListener mListener;
 
-    public MyEatherquakeListRecyclerViewAdapter(List<DummyItem> items, EarthquakeListFragment.OnListFragmentInteractionListener listener) {
+    public MyEatherquakeListRecyclerViewAdapter(List<Earthquake> items, EarthquakeListFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -36,8 +37,9 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+
+        holder.mIdView.setText(mValues.get(position).getDatetime());
+        holder.mContentView.setText(mValues.get(position).getMagnitude().toString());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +47,7 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+//                    mListener.onListFragmentInteraction(holder.mItem);
                 }
             }
         });
@@ -60,7 +62,7 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public Earthquake mItem;
 
         public ViewHolder(View view) {
             super(view);

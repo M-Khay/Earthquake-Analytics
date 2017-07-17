@@ -38,25 +38,11 @@ public class EarthquakeListActivity extends AppCompatActivity {
         }
 
         // Create the presenter
-
+        mEarthListPresenter = new EarthquakeListPresenter(earthquakeListFragment);
 //        mEarthListPresenter  = new EarthquakeListPresenter(
 //                Injection.provideTasksRepository(getApplicationContext()), tasksFragment);
 
-        APIInterface apiInterface =  APIClient.getClient().create(APIInterface.class);
-
-
-        Call<EarthquakeListData> data  = apiInterface.getRecentEarthquakeList("44","-9","22","55","demo");
-        data.enqueue(new Callback<EarthquakeListData>() {
-            @Override
-            public void onResponse(Call<EarthquakeListData> call, Response<EarthquakeListData> response) {
-                Log.d("Earthquake list ",response.toString());
-            }
-
-            @Override
-            public void onFailure(Call<EarthquakeListData> call, Throwable t) {
-
-            }
-        });
+        mEarthListPresenter.loadEarthquakeInfo();
 
 
 

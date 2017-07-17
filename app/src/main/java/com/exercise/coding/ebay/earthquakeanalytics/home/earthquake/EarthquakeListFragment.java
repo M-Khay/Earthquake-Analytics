@@ -3,6 +3,7 @@ package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,8 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.exercise.coding.ebay.earthquakeanalytics.R;
+import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
+import com.exercise.coding.ebay.earthquakeanalytics.data.model.EarthquakeListData;
 import com.exercise.coding.ebay.earthquakeanalytics.dummy.DummyContent;
 import com.exercise.coding.ebay.earthquakeanalytics.dummy.DummyContent.DummyItem;
+
+import java.util.List;
 
 /**
  * A fragment representing a list of Items.
@@ -19,8 +24,9 @@ import com.exercise.coding.ebay.earthquakeanalytics.dummy.DummyContent.DummyItem
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class EarthquakeListFragment extends Fragment {
+public class EarthquakeListFragment extends Fragment implements EarthquakeListContract.View {
 
+    RecyclerView recyclerView;
     private OnListFragmentInteractionListener mListener;
 
     /**
@@ -47,12 +53,10 @@ public class EarthquakeListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_eatherquakelist_list, container, false);
 
         // Set the adapter
-        if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            recyclerView.setAdapter(new MyEatherquakeListRecyclerViewAdapter(DummyContent.ITEMS, mListener));
-        }
+            ViewCompat.setNestedScrollingEnabled(recyclerView,true);
         return view;
     }
 
@@ -72,6 +76,18 @@ public class EarthquakeListFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void setPresenter(EarthquakeListContract.Presenter presenter) {
+
+    }
+
+    @Override
+    public void showEarthquakeInfoList(List<Earthquake> items) {
+
+        recyclerView.setAdapter(new MyEatherquakeListRecyclerViewAdapter(items, mListener));
+
     }
 
     /**
