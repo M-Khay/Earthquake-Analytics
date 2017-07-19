@@ -1,5 +1,7 @@
 package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 
+import android.support.v4.app.Fragment;
+
 import com.exercise.coding.ebay.earthquakeanalytics.BasePresenter;
 import com.exercise.coding.ebay.earthquakeanalytics.BaseView;
 import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
@@ -22,5 +24,9 @@ public interface EarthquakeListContract {
 
     public interface Presenter extends BasePresenter{
         public void loadEarthquakeInfo();
+
+        public void showView(Fragment fragment);
+
+        public void hideView(Fragment fragment);
     }
 }

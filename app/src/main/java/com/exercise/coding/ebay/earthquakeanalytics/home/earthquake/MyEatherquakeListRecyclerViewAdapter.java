@@ -15,14 +15,14 @@ import java.util.List;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link EarthquakeListData} for Unit testing and makes a call to the
- * specified {@link EarthquakeListFragment.OnListFragmentInteractionListener}.
+ * specified {@link EarthquakeListViewFragment.OnListFragmentInteractionListener}.
  */
 public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<MyEatherquakeListRecyclerViewAdapter.ViewHolder> {
 
     private final List<Earthquake> mValues;
-    private final EarthquakeListFragment.OnListFragmentInteractionListener mListener;
+    private final EarthquakeListViewFragment.OnListFragmentInteractionListener mListener;
 
-    public MyEatherquakeListRecyclerViewAdapter(List<Earthquake> items, EarthquakeListFragment.OnListFragmentInteractionListener listener) {
+    public MyEatherquakeListRecyclerViewAdapter(List<Earthquake> items, EarthquakeListViewFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -38,8 +38,11 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
 
-        holder.mIdView.setText(mValues.get(position).getDatetime());
-        holder.mContentView.setText(mValues.get(position).getMagnitude().toString());
+        holder.dateTime.setText(mValues.get(position).getDatetime());
+        holder.magnitude.setText(mValues.get(position).getMagnitude().toString());
+        holder.depth.setText(mValues.get(position).getDepth().toString());
+        holder.src.setText(mValues.get(position).getSrc().toString());
+
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,20 +63,24 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView mIdView;
-        public final TextView mContentView;
+        public final TextView dateTime;
+        public final TextView magnitude;
+        public final TextView src;
+        public final TextView depth;
         public Earthquake mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            dateTime= (TextView) view.findViewById(R.id.date_time);
+            magnitude= (TextView) view.findViewById(R.id.magnitude);
+            src= (TextView) view.findViewById(R.id.src);
+            depth= (TextView) view.findViewById(R.id.depth);
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            return super.toString() + " '" + dateTime.getText() + "'"+ " '" + magnitude.getText() + "'"+ " '" + src.getText() + "'"+ " '" + depth.getText() + "'";
         }
     }
 }

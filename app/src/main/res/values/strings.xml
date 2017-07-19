@@ -90,4 +90,8 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_about">About</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="google_maps_key">AIzaSyC3t19Uqh8IJYNnSj6OVpN-ylPOgUgWDr4</string>
+
 </resources>

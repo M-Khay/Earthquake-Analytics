@@ -4,33 +4,42 @@
     <shared>
       <config>
         <devices>
+          <device id="Nexus 6" />
           <device id="Nexus 5X" />
           <device id="Nexus 6P" />
-          <device id="Nexus 6" />
           <device id="Nexus 5" />
           <device id="Nexus 4" />
         </devices>
+        <target>android-23</target>
       </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="retrofit" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d7ca550-9073-44c3-ab38-e96ba484aa72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BasePresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BaseView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/Earthquake.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/cardview_v7_25_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_11_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_11_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_maps_11_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_11_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/EathquakeAnalyticsApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/map_marker_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_earthquake_map_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/google_map_marker.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/MyEatherquakeListRecyclerViewAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/MyEatherquakeListRecyclerViewAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,116 +71,115 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EarthquakeListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java">
+      <file leaf-file-name="google_map_marker.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/google_map_marker.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+            <state relative-caret-position="270">
+              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_eatherquakelist.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+              <folding>
+                <element signature="e#869#889#0" expanded="true" />
+                <element signature="e#1329#1349#0" expanded="true" />
+                <element signature="e#1629#1649#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EarthquakeListContract.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+            <state relative-caret-position="225">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/content_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_eatherquakelist_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist_list.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DummyContent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/dummy/DummyContent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="780">
               <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="APIInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIInterface.java">
+      <file leaf-file-name="EarthquakeMapViewFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthquakeListData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+            <state relative-caret-position="201">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2353#2517#0" expanded="true" />
+                <element signature="e#2516#2517#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Earthquake.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/Earthquake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-81">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#892#893#0" expanded="true" />
-                <element signature="e#940#941#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1040#1041#0" expanded="true" />
-                <element signature="e#1082#1083#0" expanded="true" />
-                <element signature="e#1116#1117#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1172#1173#0" expanded="true" />
-                <element signature="e#1210#1211#0" expanded="true" />
-                <element signature="e#1240#1241#0" expanded="true" />
-                <element signature="e#1270#1271#0" expanded="true" />
-                <element signature="e#1296#1297#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1364#1365#0" expanded="true" />
-                <element signature="e#1395#1396#0" expanded="true" />
-                <element signature="e#1422#1423#0" expanded="true" />
-                <element signature="e#1462#1463#0" expanded="true" />
-                <element signature="e#1494#1495#0" expanded="true" />
-                <element signature="e#1530#1531#0" expanded="true" />
-                <element signature="e#1562#1563#0" expanded="true" />
-                <element signature="e#1612#1613#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1684#1685#0" expanded="true" />
-                <element signature="e#1710#1711#0" expanded="true" />
-                <element signature="e#1748#1749#0" expanded="true" />
-                <element signature="e#1778#1779#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthquakeListPresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Call.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/3564ebef90ac75e61ed65ab9af0f422ce92d4afa/retrofit-2.1.0-sources.jar!/retrofit2/Call.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -179,20 +187,8 @@
       <file leaf-file-name="MyEatherquakeListRecyclerViewAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/MyEatherquakeListRecyclerViewAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding>
-                <element signature="e#2342#2343#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthquakeListFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
+            <state relative-caret-position="240">
+              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -204,6 +200,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -629,6 +627,11 @@
                 <option name="name" value="prepareComAndroidSupportAppcompatV72531Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:cardview-v7:25.3.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportCardviewV72531Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:design:25.3.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportDesign2531Library" />
@@ -702,6 +705,26 @@
                 <option name="description" value="Prepare com.android.support:transition:25.3.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportTransition2531Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase1101Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement1101Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-maps:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps1101Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks1101Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -843,6 +866,11 @@
                 <option name="name" value="compileMockDebugAndroidTestNdk" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase1101Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="javaPreCompileMockDebugAndroidTest" />
               </ExternalTaskPojo>
@@ -875,6 +903,11 @@
                 <option name="name" value="processMockDebugUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-maps:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps1101Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:support-media-compat:25.3.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportSupportMediaCompat2531Library" />
@@ -902,6 +935,11 @@
                 <option name="description" value="Displays all dependencies declared in project ':app'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement1101Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on all variants." />
@@ -1358,6 +1396,11 @@
                 <option name="name" value="mergeMockDebugJniLibFolders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:cardview-v7:25.3.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportCardviewV72531Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeMockDebugAndroidTestShaders" />
               </ExternalTaskPojo>
@@ -1369,6 +1412,11 @@
                 <option name="description" value="Prepare com.android.support.test.espresso:espresso-core:2.2.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportTestEspressoEspressoCore222Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:11.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks1101Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of project ':app'." />
@@ -1735,27 +1783,35 @@
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/home/HomeActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/contract.java" />
         <option value="$PROJECT_DIR$/src/main/res/menu/menu_main.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/adapter/MyEatherquakeListRecyclerViewAdapter.java" />
         <option value="$PROJECT_DIR$/../build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/EbayRestAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/EbayRestService.java" />
         <option value="$PROJECT_DIR$/build/generated/source/buildConfig/mock/debug/com/exercise/coding/ebay/earthquakeanalytics/BuildConfig.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/util/ActivityUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BaseView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BasePresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/Earthquake.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/MyEatherquakeListRecyclerViewAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/EathquakeAnalyticsApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_earthquake_map_view.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/map_marker_background.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/MyEatherquakeListRecyclerViewAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/google_map_marker.xml" />
+        <option value="$PROJECT_DIR$/../settings.gradle" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist.xml" />
       </list>
     </option>
   </component>
@@ -1763,6 +1819,25 @@
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="773" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AndroidLintGradleCompatible</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1789,6 +1864,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -1798,6 +1874,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="EarthquakeAnalytics" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1840,6 +1920,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="earthquakeanalytics" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EarthquakeAnalytics" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="earthquakeanalytics" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1932,7 +2034,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1940,13 +2041,20 @@
     <property name="device.picker.selection" value="d3fa5691" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
+    <property name="settings.editor.selected.configurable" value="gradle.experimental" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="con&#9;FILE&#9;file:///Users/kushahuja/AndroidStudioProjects/EarthquakeAnalytics/app/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java&#10;earth&#9;FILE&#9;file:///Users/kushahuja/AndroidStudioProjects/EarthquakeAnalytics/app/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java&#10;strings.x&#9;FILE&#9;file:///Users/kushahuja/AndroidStudioProjects/EarthquakeAnalytics/app/src/main/res/values/strings.xml" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.exercise.coding.ebay.earthquakeanalytics" />
     </key>
     <key name="android.template.packageName">
+      <recent name="com.exercise.coding.ebay.earthquakeanalytics.mock" />
       <recent name="com.exercise.coding.ebay.earthquakeanalytics.home" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.exercise.coding.ebay.earthquakeanalytics.util" />
@@ -2279,63 +2387,63 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.54038775" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35702747" sideWeight="0.29024944" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39878234" sideWeight="0.50646204" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53120244" sideWeight="0.64943457" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5296804" sideWeight="0.3796446" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48554033" sideWeight="0.6203554" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49353796" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35702747" sideWeight="0.7097506" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39878234" sideWeight="0.49353796" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39726028" sideWeight="0.7180937" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35702747" sideWeight="0.29024944" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53120244" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5296804" sideWeight="0.3796446" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48554033" sideWeight="0.6203554" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39878234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39726028" sideWeight="0.7180937" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.54038775" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49353796" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35702747" sideWeight="0.7097506" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2357,91 +2465,205 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
-          <line>47</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
-          <line>49</line>
+          <line>55</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java</url>
+          <line>117</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/dummy/DummyContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2449,26 +2671,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java" />
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist_list.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2497,23 +2710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/menu/menu_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -2524,10 +2720,103 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/generated/source/buildConfig/mock/debug/com/exercise/coding/ebay/earthquakeanalytics/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BaseView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BasePresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.android/build-cache/3bee6745055cd880e298f158885c2c25b807b274/output/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="231" column="18" selection-start-line="231" selection-start-column="18" selection-end-line="231" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/androidTest/java/com/exercise/coding/ebay/earthquakeanalytics/ExampleInstrumentedTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="861" column="33" selection-start-line="861" selection-start-column="33" selection-end-line="861" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_earthquake_map_view2.xml" />
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="837" column="27" selection-start-line="837" selection-start-column="27" selection-end-line="837" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/FragmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="198" column="24" selection-start-line="198" selection-start-column="24" selection-end-line="198" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.android/build-cache/f344bfb3897094f887efd1ea24f9cb9b72525360/output/jars/classes.jar!/com/google/android/gms/maps/MapFragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/EathquakeAnalyticsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -2539,30 +2828,512 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/generated/source/buildConfig/mock/debug/com/exercise/coding/ebay/earthquakeanalytics/BuildConfig.java">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/os/Looper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        <state relative-caret-position="120">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
+    <entry file="jar://$USER_HOME$/.android/build-cache/f344bfb3897094f887efd1ea24f9cb9b72525360/output/jars/classes.jar!/com/google/android/gms/maps/SupportMapFragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11610">
+          <caret line="891" column="16" selection-start-line="891" selection-start-column="16" selection-end-line="891" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/util/ActivityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4974">
+          <caret line="755" column="13" selection-start-line="755" selection-start-column="13" selection-end-line="755" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.android/build-cache/f344bfb3897094f887efd1ea24f9cb9b72525360/output/jars/classes.jar!/com/google/android/gms/maps/model/LatLng.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
+        <state relative-caret-position="30">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/3564ebef90ac75e61ed65ab9af0f422ce92d4afa/retrofit-2.1.0-sources.jar!/retrofit2/Call.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="-285">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/map_marker_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListViewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.3.1/recyclerview-v7-25.3.1-sources.jar!/android/support/v7/widget/RecyclerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="10175" column="33" selection-start-line="10175" selection-start-column="33" selection-end-line="10175" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#554055#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#14727#15377#0" expanded="false" />
+            <element signature="e#15376#15377#0" expanded="false" />
+            <element signature="e#20953#21183#0" expanded="false" />
+            <element signature="e#21182#21183#0" expanded="false" />
+            <element signature="e#21239#21410#0" expanded="false" />
+            <element signature="e#21409#21410#0" expanded="false" />
+            <element signature="e#23365#23366#0" expanded="false" />
+            <element signature="e#23400#23401#0" expanded="false" />
+            <element signature="e#23474#23475#0" expanded="false" />
+            <element signature="e#23513#23514#0" expanded="false" />
+            <element signature="e#30782#30783#0" expanded="false" />
+            <element signature="e#30854#30855#0" expanded="false" />
+            <element signature="e#31343#31344#0" expanded="false" />
+            <element signature="e#31418#31419#0" expanded="false" />
+            <element signature="e#32034#32035#0" expanded="false" />
+            <element signature="e#32109#32110#0" expanded="false" />
+            <element signature="e#32504#32505#0" expanded="false" />
+            <element signature="e#32570#32571#0" expanded="false" />
+            <element signature="e#36469#36470#0" expanded="false" />
+            <element signature="e#36519#36520#0" expanded="false" />
+            <element signature="e#37526#37527#0" expanded="false" />
+            <element signature="e#37576#37577#0" expanded="false" />
+            <element signature="e#38861#38862#0" expanded="false" />
+            <element signature="e#38905#38906#0" expanded="false" />
+            <element signature="e#39093#39094#0" expanded="false" />
+            <element signature="e#39129#39130#0" expanded="false" />
+            <element signature="e#40093#40094#0" expanded="false" />
+            <element signature="e#40130#40131#0" expanded="false" />
+            <element signature="e#45346#45347#0" expanded="false" />
+            <element signature="e#45377#45378#0" expanded="false" />
+            <element signature="e#45908#45909#0" expanded="false" />
+            <element signature="e#45952#45953#0" expanded="false" />
+            <element signature="e#50805#50806#0" expanded="false" />
+            <element signature="e#50844#50845#0" expanded="false" />
+            <element signature="e#54276#54277#0" expanded="false" />
+            <element signature="e#54306#54307#0" expanded="false" />
+            <element signature="e#54766#54767#0" expanded="false" />
+            <element signature="e#54820#54821#0" expanded="false" />
+            <element signature="e#55358#55359#0" expanded="false" />
+            <element signature="e#55409#55410#0" expanded="false" />
+            <element signature="e#56397#56398#0" expanded="false" />
+            <element signature="e#56445#56446#0" expanded="false" />
+            <element signature="e#56681#56682#0" expanded="false" />
+            <element signature="e#56716#56717#0" expanded="false" />
+            <element signature="e#59095#59096#0" expanded="false" />
+            <element signature="e#59139#59140#0" expanded="false" />
+            <element signature="e#61261#61262#0" expanded="false" />
+            <element signature="e#61303#61304#0" expanded="false" />
+            <element signature="e#79953#79954#0" expanded="false" />
+            <element signature="e#79989#79990#0" expanded="false" />
+            <element signature="e#80227#80228#0" expanded="false" />
+            <element signature="e#80271#80272#0" expanded="false" />
+            <element signature="e#84189#84190#0" expanded="false" />
+            <element signature="e#84229#84230#0" expanded="false" />
+            <element signature="e#84431#84432#0" expanded="false" />
+            <element signature="e#84471#84472#0" expanded="false" />
+            <element signature="e#89307#89308#0" expanded="false" />
+            <element signature="e#89377#89378#0" expanded="false" />
+            <element signature="e#103847#103848#0" expanded="false" />
+            <element signature="e#103881#103882#0" expanded="false" />
+            <element signature="e#127160#127161#0" expanded="false" />
+            <element signature="e#127201#127202#0" expanded="false" />
+            <element signature="e#129464#129465#0" expanded="false" />
+            <element signature="e#129513#129514#0" expanded="false" />
+            <element signature="e#131224#131225#0" expanded="false" />
+            <element signature="e#131260#131261#0" expanded="false" />
+            <element signature="e#166202#166203#0" expanded="false" />
+            <element signature="e#166275#166276#0" expanded="false" />
+            <element signature="e#175621#175622#0" expanded="false" />
+            <element signature="e#175669#175670#0" expanded="false" />
+            <element signature="e#178899#178900#0" expanded="false" />
+            <element signature="e#178952#178953#0" expanded="false" />
+            <element signature="e#203315#203316#0" expanded="false" />
+            <element signature="e#203367#203368#0" expanded="false" />
+            <element signature="e#213902#213903#0" expanded="false" />
+            <element signature="e#213940#213941#0" expanded="false" />
+            <element signature="e#213965#213966#0" expanded="false" />
+            <element signature="e#214003#214004#0" expanded="false" />
+            <element signature="e#218194#218206#0" expanded="false" />
+            <element signature="e#219897#219898#0" expanded="false" />
+            <element signature="e#219954#219955#0" expanded="false" />
+            <element signature="e#228067#228068#0" expanded="false" />
+            <element signature="e#228133#228134#0" expanded="false" />
+            <element signature="e#250415#250416#0" expanded="false" />
+            <element signature="e#250467#250468#0" expanded="false" />
+            <element signature="e#250509#250510#0" expanded="false" />
+            <element signature="e#250574#250575#0" expanded="false" />
+            <element signature="e#274905#274906#0" expanded="false" />
+            <element signature="e#274937#274938#0" expanded="false" />
+            <element signature="e#276042#276043#0" expanded="false" />
+            <element signature="e#276078#276079#0" expanded="false" />
+            <element signature="e#276718#276719#0" expanded="false" />
+            <element signature="e#276762#276763#0" expanded="false" />
+            <element signature="e#280391#280392#0" expanded="false" />
+            <element signature="e#280427#280428#0" expanded="false" />
+            <element signature="e#281734#281735#0" expanded="false" />
+            <element signature="e#281791#281792#0" expanded="false" />
+            <element signature="e#285775#285776#0" expanded="false" />
+            <element signature="e#285826#285827#0" expanded="false" />
+            <element signature="e#297653#297654#0" expanded="false" />
+            <element signature="e#297742#297743#0" expanded="false" />
+            <element signature="e#297819#297820#0" expanded="false" />
+            <element signature="e#297887#297888#0" expanded="false" />
+            <element signature="e#298146#298147#0" expanded="false" />
+            <element signature="e#298236#298237#0" expanded="false" />
+            <element signature="e#299527#299528#0" expanded="false" />
+            <element signature="e#299616#299617#0" expanded="false" />
+            <element signature="e#299693#299694#0" expanded="false" />
+            <element signature="e#299761#299762#0" expanded="false" />
+            <element signature="e#300020#300021#0" expanded="false" />
+            <element signature="e#300109#300110#0" expanded="false" />
+            <element signature="e#316276#316277#0" expanded="false" />
+            <element signature="e#316322#316323#0" expanded="false" />
+            <element signature="e#316699#316700#0" expanded="false" />
+            <element signature="e#316742#316743#0" expanded="false" />
+            <element signature="e#318153#318154#0" expanded="false" />
+            <element signature="e#318189#318190#0" expanded="false" />
+            <element signature="e#320033#320034#0" expanded="false" />
+            <element signature="e#320084#320085#0" expanded="false" />
+            <element signature="e#323612#323613#0" expanded="false" />
+            <element signature="e#323662#323663#0" expanded="false" />
+            <element signature="e#333878#333879#0" expanded="false" />
+            <element signature="e#333919#333920#0" expanded="false" />
+            <element signature="e#336710#336711#0" expanded="false" />
+            <element signature="e#336742#336743#0" expanded="false" />
+            <element signature="e#337612#337613#0" expanded="false" />
+            <element signature="e#337644#337645#0" expanded="false" />
+            <element signature="e#337938#337939#0" expanded="false" />
+            <element signature="e#337974#337975#0" expanded="false" />
+            <element signature="e#338262#338263#0" expanded="false" />
+            <element signature="e#338298#338299#0" expanded="false" />
+            <element signature="e#340752#340753#0" expanded="false" />
+            <element signature="e#340827#340828#0" expanded="false" />
+            <element signature="e#342139#342140#0" expanded="false" />
+            <element signature="e#342193#342194#0" expanded="false" />
+            <element signature="e#343099#343100#0" expanded="false" />
+            <element signature="e#343153#343154#0" expanded="false" />
+            <element signature="e#343493#343494#0" expanded="false" />
+            <element signature="e#343535#343536#0" expanded="false" />
+            <element signature="e#343932#343933#0" expanded="false" />
+            <element signature="e#343987#343988#0" expanded="false" />
+            <element signature="e#347264#347265#0" expanded="false" />
+            <element signature="e#347318#347319#0" expanded="false" />
+            <element signature="e#348711#348712#0" expanded="false" />
+            <element signature="e#348744#348745#0" expanded="false" />
+            <element signature="e#353969#353970#0" expanded="false" />
+            <element signature="e#354037#354038#0" expanded="false" />
+            <element signature="e#356207#356208#0" expanded="false" />
+            <element signature="e#356252#356253#0" expanded="false" />
+            <element signature="e#360420#360421#0" expanded="false" />
+            <element signature="e#360461#360462#0" expanded="false" />
+            <element signature="e#361095#361096#0" expanded="false" />
+            <element signature="e#361137#361138#0" expanded="false" />
+            <element signature="e#361295#361296#0" expanded="false" />
+            <element signature="e#361332#361333#0" expanded="false" />
+            <element signature="e#361493#361494#0" expanded="false" />
+            <element signature="e#361531#361532#0" expanded="false" />
+            <element signature="e#363393#363394#0" expanded="false" />
+            <element signature="e#363474#363475#0" expanded="false" />
+            <element signature="e#363742#363743#0" expanded="false" />
+            <element signature="e#363822#363823#0" expanded="false" />
+            <element signature="e#374427#374428#0" expanded="false" />
+            <element signature="e#374482#374483#0" expanded="false" />
+            <element signature="e#398506#398507#0" expanded="false" />
+            <element signature="e#398541#398542#0" expanded="false" />
+            <element signature="e#414490#414491#0" expanded="false" />
+            <element signature="e#414522#414523#0" expanded="false" />
+            <element signature="e#415077#415078#0" expanded="false" />
+            <element signature="e#415109#415110#0" expanded="false" />
+            <element signature="e#415679#415680#0" expanded="false" />
+            <element signature="e#415711#415712#0" expanded="false" />
+            <element signature="e#416222#416223#0" expanded="false" />
+            <element signature="e#416254#416255#0" expanded="false" />
+            <element signature="e#416801#416802#0" expanded="false" />
+            <element signature="e#416833#416834#0" expanded="false" />
+            <element signature="e#417395#417396#0" expanded="false" />
+            <element signature="e#417427#417428#0" expanded="false" />
+            <element signature="e#418881#418882#0" expanded="false" />
+            <element signature="e#418953#418954#0" expanded="false" />
+            <element signature="e#419093#419094#0" expanded="false" />
+            <element signature="e#419166#419167#0" expanded="false" />
+            <element signature="e#419888#419889#0" expanded="false" />
+            <element signature="e#419923#419924#0" expanded="false" />
+            <element signature="e#428609#428610#0" expanded="false" />
+            <element signature="e#428666#428667#0" expanded="false" />
+            <element signature="e#432006#432007#0" expanded="false" />
+            <element signature="e#432042#432043#0" expanded="false" />
+            <element signature="e#437647#437648#0" expanded="false" />
+            <element signature="e#437683#437684#0" expanded="false" />
+            <element signature="e#439983#439984#0" expanded="false" />
+            <element signature="e#440024#440025#0" expanded="false" />
+            <element signature="e#445799#445800#0" expanded="false" />
+            <element signature="e#445835#445836#0" expanded="false" />
+            <element signature="e#457024#457025#0" expanded="false" />
+            <element signature="e#457082#457083#0" expanded="false" />
+            <element signature="e#461345#461346#0" expanded="false" />
+            <element signature="e#461388#461389#0" expanded="false" />
+            <element signature="e#461634#461635#0" expanded="false" />
+            <element signature="e#461672#461673#0" expanded="false" />
+            <element signature="e#461795#461796#0" expanded="false" />
+            <element signature="e#461839#461840#0" expanded="false" />
+            <element signature="e#461868#461869#0" expanded="false" />
+            <element signature="e#461922#461923#0" expanded="false" />
+            <element signature="e#461948#461949#0" expanded="false" />
+            <element signature="e#462005#462006#0" expanded="false" />
+            <element signature="e#462047#462048#0" expanded="false" />
+            <element signature="e#462118#462119#0" expanded="false" />
+            <element signature="e#462163#462164#0" expanded="false" />
+            <element signature="e#462230#462231#0" expanded="false" />
+            <element signature="e#462267#462268#0" expanded="false" />
+            <element signature="e#462327#462328#0" expanded="false" />
+            <element signature="e#462358#462359#0" expanded="false" />
+            <element signature="e#462412#462413#0" expanded="false" />
+            <element signature="e#462613#462614#0" expanded="false" />
+            <element signature="e#462672#462673#0" expanded="false" />
+            <element signature="e#462705#462706#0" expanded="false" />
+            <element signature="e#462763#462764#0" expanded="false" />
+            <element signature="e#462792#462793#0" expanded="false" />
+            <element signature="e#462849#462850#0" expanded="false" />
+            <element signature="e#462880#462881#0" expanded="false" />
+            <element signature="e#462939#462940#0" expanded="false" />
+            <element signature="e#462986#462987#0" expanded="false" />
+            <element signature="e#463038#463039#0" expanded="false" />
+            <element signature="e#463073#463074#0" expanded="false" />
+            <element signature="e#463137#463138#0" expanded="false" />
+            <element signature="e#463320#463321#0" expanded="false" />
+            <element signature="e#463386#463387#0" expanded="false" />
+            <element signature="e#463422#463423#0" expanded="false" />
+            <element signature="e#463461#463462#0" expanded="false" />
+            <element signature="e#469567#469568#0" expanded="false" />
+            <element signature="e#469633#469634#0" expanded="false" />
+            <element signature="e#470021#470022#0" expanded="false" />
+            <element signature="e#470079#470080#0" expanded="false" />
+            <element signature="e#472424#472425#0" expanded="false" />
+            <element signature="e#472484#472485#0" expanded="false" />
+            <element signature="e#474462#474463#0" expanded="false" />
+            <element signature="e#474501#474502#0" expanded="false" />
+            <element signature="e#474555#474556#0" expanded="false" />
+            <element signature="e#474599#474600#0" expanded="false" />
+            <element signature="e#474657#474658#0" expanded="false" />
+            <element signature="e#474694#474695#0" expanded="false" />
+            <element signature="e#474756#474757#0" expanded="false" />
+            <element signature="e#474793#474794#0" expanded="false" />
+            <element signature="e#474845#474846#0" expanded="false" />
+            <element signature="e#474907#474908#0" expanded="false" />
+            <element signature="e#475200#475201#0" expanded="false" />
+            <element signature="e#475256#475257#0" expanded="false" />
+            <element signature="e#475547#475548#0" expanded="false" />
+            <element signature="e#475601#475602#0" expanded="false" />
+            <element signature="e#476041#476042#0" expanded="false" />
+            <element signature="e#476095#476096#0" expanded="false" />
+            <element signature="e#476515#476516#0" expanded="false" />
+            <element signature="e#476569#476570#0" expanded="false" />
+            <element signature="e#476750#476751#0" expanded="false" />
+            <element signature="e#476806#476807#0" expanded="false" />
+            <element signature="e#477108#477109#0" expanded="false" />
+            <element signature="e#477170#477171#0" expanded="false" />
+            <element signature="e#477607#477608#0" expanded="false" />
+            <element signature="e#477670#477671#0" expanded="false" />
+            <element signature="e#479341#479342#0" expanded="false" />
+            <element signature="e#479400#479401#0" expanded="false" />
+            <element signature="e#480788#480789#0" expanded="false" />
+            <element signature="e#480844#480845#0" expanded="false" />
+            <element signature="e#481094#481095#0" expanded="false" />
+            <element signature="e#481139#481140#0" expanded="false" />
+            <element signature="e#482413#482414#0" expanded="false" />
+            <element signature="e#482462#482463#0" expanded="false" />
+            <element signature="e#482587#482588#0" expanded="false" />
+            <element signature="e#482626#482627#0" expanded="false" />
+            <element signature="e#482890#482891#0" expanded="false" />
+            <element signature="e#482936#482937#0" expanded="false" />
+            <element signature="e#484723#484724#0" expanded="false" />
+            <element signature="e#484791#484792#0" expanded="false" />
+            <element signature="e#488639#488640#0" expanded="false" />
+            <element signature="e#488709#488710#0" expanded="false" />
+            <element signature="e#488993#488994#0" expanded="false" />
+            <element signature="e#489053#489054#0" expanded="false" />
+            <element signature="e#490622#490623#0" expanded="false" />
+            <element signature="e#490686#490687#0" expanded="false" />
+            <element signature="e#490725#490726#0" expanded="false" />
+            <element signature="e#490784#490785#0" expanded="false" />
+            <element signature="e#492775#492776#0" expanded="false" />
+            <element signature="e#492817#492818#0" expanded="false" />
+            <element signature="e#492964#492965#0" expanded="false" />
+            <element signature="e#493006#493007#0" expanded="false" />
+            <element signature="e#493159#493160#0" expanded="false" />
+            <element signature="e#493207#493208#0" expanded="false" />
+            <element signature="e#493397#493398#0" expanded="false" />
+            <element signature="e#493449#493450#0" expanded="false" />
+            <element signature="e#495885#495886#0" expanded="false" />
+            <element signature="e#495937#495938#0" expanded="false" />
+            <element signature="e#499285#499286#0" expanded="false" />
+            <element signature="e#499326#499327#0" expanded="false" />
+            <element signature="e#499555#499556#0" expanded="false" />
+            <element signature="e#499612#499613#0" expanded="false" />
+            <element signature="e#500060#500061#0" expanded="false" />
+            <element signature="e#500135#500136#0" expanded="false" />
+            <element signature="e#505836#505837#0" expanded="false" />
+            <element signature="e#505879#505880#0" expanded="false" />
+            <element signature="e#505989#505990#0" expanded="false" />
+            <element signature="e#506032#506033#0" expanded="false" />
+            <element signature="e#506370#506371#0" expanded="false" />
+            <element signature="e#506425#506426#0" expanded="false" />
+            <element signature="e#506751#506752#0" expanded="false" />
+            <element signature="e#506802#506803#0" expanded="false" />
+            <element signature="e#508775#508776#0" expanded="false" />
+            <element signature="e#508821#508822#0" expanded="false" />
+            <element signature="e#509378#509379#0" expanded="false" />
+            <element signature="e#509426#509427#0" expanded="false" />
+            <element signature="e#517900#517930#0" expanded="false" />
+            <element signature="e#518302#518303#0" expanded="false" />
+            <element signature="e#518346#518347#0" expanded="false" />
+            <element signature="e#518557#518558#0" expanded="false" />
+            <element signature="e#518609#518610#0" expanded="false" />
+            <element signature="e#518804#518805#0" expanded="false" />
+            <element signature="e#518847#518848#0" expanded="false" />
+            <element signature="e#519053#519054#0" expanded="false" />
+            <element signature="e#519103#519104#0" expanded="false" />
+            <element signature="e#519307#519308#0" expanded="false" />
+            <element signature="e#519353#519354#0" expanded="false" />
+            <element signature="e#519574#519575#0" expanded="false" />
+            <element signature="e#519630#519631#0" expanded="false" />
+            <element signature="e#519834#519835#0" expanded="false" />
+            <element signature="e#519880#519881#0" expanded="false" />
+            <element signature="e#520101#520102#0" expanded="false" />
+            <element signature="e#520157#520158#0" expanded="false" />
+            <element signature="e#520571#520572#0" expanded="false" />
+            <element signature="e#520615#520616#0" expanded="false" />
+            <element signature="e#545705#545706#0" expanded="false" />
+            <element signature="e#545740#545741#0" expanded="false" />
+            <element signature="e#548557#548558#0" expanded="false" />
+            <element signature="e#548608#548609#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/Earthquake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#861#862#0" expanded="false" />
+            <element signature="e#892#893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_earthquake_map_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/google_map_marker.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../settings.gradle">
@@ -2573,190 +3344,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BaseView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/BasePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/util/ActivityUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.3.1/recyclerview-v7-25.3.1-sources.jar!/android/support/v7/widget/RecyclerView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10723" column="16" selection-start-line="10723" selection-start-column="16" selection-end-line="10723" selection-end-column="16" />
+        <state relative-caret-position="225">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.android/build-cache/3bee6745055cd880e298f158885c2c25b807b274/output/res/values/values.xml">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="231" column="18" selection-start-line="231" selection-start-column="18" selection-end-line="231" selection-end-column="18" />
+        <state relative-caret-position="344">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/dummy/DummyContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="780">
           <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/3564ebef90ac75e61ed65ab9af0f422ce92d4afa/retrofit-2.1.0-sources.jar!/retrofit2/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/MyEatherquakeListRecyclerViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#2342#2343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/EarthquakeListData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/rest/APIInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        <state relative-caret-position="240">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeListPresenter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_eatherquakelist.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#869#889#0" expanded="true" />
+            <element signature="e#1329#1349#0" expanded="true" />
+            <element signature="e#1629#1649#0" expanded="true" />
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/data/model/Earthquake.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/exercise/coding/ebay/earthquakeanalytics/home/earthquake/EarthquakeMapViewFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="201">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1040#1041#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
-            <element signature="e#1210#1211#0" expanded="true" />
-            <element signature="e#1240#1241#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1364#1365#0" expanded="true" />
-            <element signature="e#1395#1396#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1494#1495#0" expanded="true" />
-            <element signature="e#1530#1531#0" expanded="true" />
-            <element signature="e#1562#1563#0" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1748#1749#0" expanded="true" />
-            <element signature="e#1778#1779#0" expanded="true" />
+            <element signature="e#2353#2517#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
           </folding>
         </state>
       </provider>

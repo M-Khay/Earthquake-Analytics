@@ -33,6 +33,20 @@
     </android.support.design.widget.AppBarLayout>
 
 
+
+    <fragment
+        android:id="@+id/map"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.exercise.coding.ebay.myapplication.MapsActivity" />
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -41,11 +55,6 @@
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <FrameLayout
-        android:id="@+id/content_frame"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 
 

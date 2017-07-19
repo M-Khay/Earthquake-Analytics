@@ -24,7 +24,7 @@ import java.util.List;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class EarthquakeListFragment extends Fragment implements EarthquakeListContract.View {
+public class EarthquakeListViewFragment extends Fragment implements EarthquakeListContract.View {
 
     RecyclerView recyclerView;
     private OnListFragmentInteractionListener mListener;
@@ -33,11 +33,11 @@ public class EarthquakeListFragment extends Fragment implements EarthquakeListCo
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public EarthquakeListFragment() {
+    public EarthquakeListViewFragment() {
     }
 
-    public static EarthquakeListFragment newInstance() {
-        EarthquakeListFragment fragment = new EarthquakeListFragment();
+    public static EarthquakeListViewFragment newInstance() {
+        EarthquakeListViewFragment fragment = new EarthquakeListViewFragment();
         return fragment;
     }
 
