@@ -14,7 +14,7 @@
         android:id="@+id/text_view"
         android:text="8"
         android:textSize="16pt"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"

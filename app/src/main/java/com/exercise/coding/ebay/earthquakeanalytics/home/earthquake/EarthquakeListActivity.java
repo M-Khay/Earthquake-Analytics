@@ -3,35 +3,25 @@ package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewCompat;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.exercise.coding.ebay.earthquakeanalytics.R;
-import com.exercise.coding.ebay.earthquakeanalytics.data.model.EarthquakeListData;
-import com.exercise.coding.ebay.earthquakeanalytics.rest.APIClient;
-import com.exercise.coding.ebay.earthquakeanalytics.rest.APIInterface;
+import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
 import com.exercise.coding.ebay.earthquakeanalytics.util.ActivityUtil;
-import com.google.android.gms.maps.SupportMapFragment;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-public class EarthquakeListActivity extends AppCompatActivity implements EarthquakeMapViewFragment.OnMapFragmentInteractionListener {
+public class EarthquakeListActivity extends AppCompatActivity implements EarthquakeMapViewFragment.OnMapFragmentInteractionListener, EarthquakeListViewFragment.OnListFragmentInteractionListener {
 
     private EarthquakeListPresenter mEarthquakeListPresenter;
     private EarthquakeListPresenter mEarthquakeMapPresenter;
 
     EarthquakeMapViewFragment earthquakeMapViewFragment;
     EarthquakeListViewFragment earthquakeListViewFragment;
-    public SupportMapFragment supportMapFragment;
     private boolean toggleMapView = true;
 
     @Override
@@ -39,68 +29,65 @@ public class EarthquakeListActivity extends AppCompatActivity implements Earthqu
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//         set up toolbar
+        // set up toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
         // create the fragment
         earthquakeListViewFragment = (EarthquakeListViewFragment) getSupportFragmentManager().findFragmentById(R.id.content_frame);
-        supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        ViewCompat.setNestedScrollingEnabled(supportMapFragment.getView(), true);
-
+        earthquakeMapViewFragment = (EarthquakeMapViewFragment) getSupportFragmentManager().findFragmentById(R.id.content_frame_map);
 
         if (earthquakeListViewFragment == null) {
             earthquakeListViewFragment = EarthquakeListViewFragment.newInstance();
             ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), earthquakeListViewFragment, R.id.content_frame);
         }
 
-        if (supportMapFragment == null || earthquakeMapViewFragment == null) {
+        if (earthquakeMapViewFragment == null) {
             earthquakeMapViewFragment = EarthquakeMapViewFragment.newInstance(this);
+            ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), earthquakeMapViewFragment, R.id.content_frame_map);
         }
 
-        FloatingActionButton fabChangeViewType = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fabChangeViewType = (FloatingActionButton) findViewById(R.id.fab);
+        fabChangeViewType.setImageResource(R.drawable.format_list_bulleted);
         fabChangeViewType.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (toggleMapView) {
                     mEarthquakeListPresenter.showView(earthquakeListViewFragment);
-                    mEarthquakeMapPresenter.hideView(supportMapFragment);
+                    mEarthquakeMapPresenter.hideView(earthquakeMapViewFragment);
+
+                    fabChangeViewType.setImageResource(R.drawable.google_maps);
                     toggleMapView =  false;
                 } else {
-                    mEarthquakeListPresenter.showView(supportMapFragment);
+                    fabChangeViewType.setImageResource(R.drawable.format_list_bulleted);
+                    mEarthquakeListPresenter.showView(earthquakeMapViewFragment);
                     mEarthquakeMapPresenter.hideView(earthquakeListViewFragment);
                     toggleMapView = true;
                 }
 
             }
         });
+
 //         Create the presenter
         mEarthquakeListPresenter = new EarthquakeListPresenter(earthquakeListViewFragment);
         mEarthquakeMapPresenter = new EarthquakeListPresenter(earthquakeMapViewFragment);
 
 
-        mEarthquakeListPresenter.loadEarthquakeInfo();
-        mEarthquakeMapPresenter.loadEarthquakeInfo();
-
-
+        Snackbar mySnackbar = Snackbar.make(findViewById(R.id.snackbar_text),
+                "Click on the marker to view details about that earthquake.", Snackbar.LENGTH_SHORT);
+        mySnackbar.show();
     }
 
 
     @Override
     protected void onResume() {
         super.onResume();
+
         mEarthquakeListPresenter.hideView(earthquakeListViewFragment);
 
-    }
-
-    @Override
-    public void onAttachFragment(Fragment fragment) {
-        super.onAttachFragment(fragment);
-        if (fragment instanceof EarthquakeListViewFragment) {
-//            mEarthquakeListPresenter.hideView(earthquakeListViewFragment);
-        }
-
+        mEarthquakeListPresenter.loadEarthquakeInfo(this);
+        mEarthquakeMapPresenter.loadEarthquakeInfo(this);
 
     }
 
@@ -126,6 +113,11 @@ public class EarthquakeListActivity extends AppCompatActivity implements Earthqu
 
     @Override
     public void onMapFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onListFragmentInteraction(Earthquake item) {
 
     }
 }

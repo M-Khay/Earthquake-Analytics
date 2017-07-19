@@ -3,6 +3,10 @@ package com.exercise.coding.ebay.earthquakeanalytics.data.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import java.io.Serializable;
 
 /**
@@ -90,7 +94,7 @@ public class Earthquake implements Serializable {
         this.lat = lat;
     }
 
-   /* @Override
+    @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this);
     }
@@ -110,6 +114,6 @@ public class Earthquake implements Serializable {
         }
         Earthquake rhs = ((Earthquake) other);
         return new EqualsBuilder().append(datetime, rhs.datetime).append(depth, rhs.depth).append(lng, rhs.lng).append(src, rhs.src).append(eqid, rhs.eqid).append(magnitude, rhs.magnitude).append(lat, rhs.lat).isEquals();
-    }*/
+    }
 
 }

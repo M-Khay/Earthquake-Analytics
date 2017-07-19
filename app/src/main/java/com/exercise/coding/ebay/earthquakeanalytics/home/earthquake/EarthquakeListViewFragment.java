@@ -12,9 +12,6 @@ import android.view.ViewGroup;
 
 import com.exercise.coding.ebay.earthquakeanalytics.R;
 import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
-import com.exercise.coding.ebay.earthquakeanalytics.data.model.EarthquakeListData;
-import com.exercise.coding.ebay.earthquakeanalytics.dummy.DummyContent;
-import com.exercise.coding.ebay.earthquakeanalytics.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
@@ -62,14 +59,14 @@ public class EarthquakeListViewFragment extends Fragment implements EarthquakeLi
 
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-//        if (context instanceof OnListFragmentInteractionListener) {
-//            mListener = (OnListFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnListFragmentInteractionListener");
-//        }
+    public void onAttach(Context mContext) {
+        super.onAttach(mContext);
+        if (mContext instanceof EarthquakeListViewFragment.OnListFragmentInteractionListener) {
+            mListener = (EarthquakeListViewFragment.OnListFragmentInteractionListener) mContext;
+        } else {
+            throw new RuntimeException(mContext.toString()
+                    + " must implement OnListFragmentInteractionListener");
+        }
     }
 
     @Override
@@ -86,7 +83,7 @@ public class EarthquakeListViewFragment extends Fragment implements EarthquakeLi
     @Override
     public void showEarthquakeInfoList(List<Earthquake> items) {
 
-        recyclerView.setAdapter(new MyEatherquakeListRecyclerViewAdapter(items, mListener));
+        recyclerView.setAdapter(new MyEatherquakeListRecyclerViewAdapter(items, mListener,getActivity()));
 
     }
 
@@ -102,6 +99,6 @@ public class EarthquakeListViewFragment extends Fragment implements EarthquakeLi
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Earthquake item);
     }
 }

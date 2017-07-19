@@ -1,15 +1,17 @@
 package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
 
+import com.exercise.coding.ebay.earthquakeanalytics.R;
 import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
 import com.exercise.coding.ebay.earthquakeanalytics.data.model.EarthquakeListData;
 import com.exercise.coding.ebay.earthquakeanalytics.rest.APIClient;
 import com.exercise.coding.ebay.earthquakeanalytics.rest.APIInterface;
-import com.google.android.gms.maps.SupportMapFragment;
 
 import java.util.List;
 
@@ -40,7 +42,7 @@ public class EarthquakeListPresenter implements EarthquakeListContract.Presenter
     }
 
     @Override
-    public void loadEarthquakeInfo() {
+    public void loadEarthquakeInfo(final Context mContext) {
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
 
 
@@ -54,10 +56,15 @@ public class EarthquakeListPresenter implements EarthquakeListContract.Presenter
                 List<Earthquake> responeEarthquakeList = response.body().getEarthquakes();
                 if (responeEarthquakeList != null)
                     mEarthquakeListView.showEarthquakeInfoList(responeEarthquakeList);
-            }
+
+                            }
+
 
             @Override
             public void onFailure(Call<EarthquakeListData> call, Throwable t) {
+                Snackbar mySnackbar = Snackbar.make(((EarthquakeListActivity )mContext).findViewById(R.id.snackbar_text),
+                        "Something went wrong, lets try that again.", Snackbar.LENGTH_SHORT);
+                mySnackbar.show();
 
             }
         });
@@ -68,8 +75,8 @@ public class EarthquakeListPresenter implements EarthquakeListContract.Presenter
     public void showView(Fragment fragment) {
         if (fragment instanceof EarthquakeListViewFragment)
             ((EarthquakeListViewFragment) fragment).getView().setVisibility(View.VISIBLE);
-        else if (fragment instanceof SupportMapFragment) {
-            ((SupportMapFragment) fragment).getView().setVisibility(View.VISIBLE);
+        else if (fragment instanceof EarthquakeMapViewFragment) {
+            ((EarthquakeMapViewFragment) fragment).getView().setVisibility(View.VISIBLE);
         }
 
     }
@@ -78,8 +85,8 @@ public class EarthquakeListPresenter implements EarthquakeListContract.Presenter
     public void hideView(Fragment fragment) {
         if (fragment instanceof EarthquakeListViewFragment)
             ((EarthquakeListViewFragment) fragment).getView().setVisibility(View.INVISIBLE);
-        else if (fragment instanceof SupportMapFragment)
-            ((SupportMapFragment) fragment).getView().setVisibility(View.INVISIBLE);
+        else if (fragment instanceof EarthquakeMapViewFragment)
+            ((EarthquakeMapViewFragment) fragment).getView().setVisibility(View.INVISIBLE);
 
     }
 
