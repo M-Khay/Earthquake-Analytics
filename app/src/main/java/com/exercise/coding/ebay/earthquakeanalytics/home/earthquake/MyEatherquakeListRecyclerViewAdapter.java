@@ -1,6 +1,8 @@
 package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 
 import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +14,9 @@ import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
 import com.exercise.coding.ebay.earthquakeanalytics.data.model.EarthquakeListData;
 import com.exercise.coding.ebay.earthquakeanalytics.util.ActivityUtil;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link EarthquakeListData} for Unit testing and makes a call to the
@@ -41,10 +45,25 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
 
-        holder.dateTime.setText("Date : "+ mValues.get(position).getDatetime());
-        holder.magnitude.setText("Magnitude : "+mValues.get(position).getMagnitude().toString());
-        holder.depth.setText("Depth : "+mValues.get(position).getDepth().toString());
-        holder.src.setText("Source : "+mValues.get(position).getSrc().toString());
+        Geocoder geocoder;
+        List<Address> addresses = null;
+//        geocoder = new Geocoder(mContext, Locale.getDefault());
+
+//        try {
+//            addresses = geocoder.getFromLocation(mValues.get(position).getLat(), mValues.get(position).getLng(), 5); // Here 5 represent max location result to returned, by documents it recommended 1 to 5
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
+        holder.dateTime.setText("Date : "+ mValues.get(position).getDatetime().substring(0,10));
+        holder.magnitude.setText("Magnitude : "+ mValues.get(position).getMagnitude());
+//      if(addresses !=null && addresses.size()!=0){
+//        holder.country.setText("Location : "+ addresses.get(0).getCountryName());
+//      }else{
+//          holder.country.setText("Location : "+ "View it on map");
+//
+//      }
         ColorCode colorCode = ActivityUtil.getColorCode(mValues.get(position).getMagnitude());
         switch (colorCode){
             case YELLOW:
@@ -69,8 +88,8 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
         public final View mView;
         public final TextView dateTime;
         public final TextView magnitude;
-        public final TextView src;
-        public final TextView depth;
+        public final TextView country;
+
         public Earthquake mItem;
 
         public ViewHolder(View view) {
@@ -78,15 +97,14 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
             mView = view;
             dateTime= (TextView) view.findViewById(R.id.date_time);
             magnitude= (TextView) view.findViewById(R.id.magnitude);
-            src= (TextView) view.findViewById(R.id.src);
-            depth= (TextView) view.findViewById(R.id.depth);
+            country= (TextView) view.findViewById(R.id.country);
 
 
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + dateTime.getText() + "'"+ " '" + magnitude.getText() + "'"+ " '" + src.getText() + "'"+ " '" + depth.getText() + "'";
+            return super.toString() + " '" + dateTime.getText() + "'"+ " '" + magnitude.getText() + "'" + "'";
         }
     }
 }

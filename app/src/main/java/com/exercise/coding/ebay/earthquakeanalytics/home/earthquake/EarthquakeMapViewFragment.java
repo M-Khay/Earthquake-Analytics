@@ -9,6 +9,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewCompat;
 import android.view.Gravity;
@@ -32,6 +33,10 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.List;
+
+/**
+ * Created by kushahuja on 7/15/17.
+ */
 
 
 /**
@@ -147,6 +152,10 @@ public class EarthquakeMapViewFragment extends Fragment implements EarthquakeLis
                     .setIcon(BitmapDescriptorFactory.fromBitmap(bm));
             map.moveCamera(CameraUpdateFactory.newLatLng(position));
         }
+
+        Snackbar mySnackbar = Snackbar.make(getActivity().findViewById(R.id.snackbar_text),
+                "Click on the marker to view details about that earthquake.", Snackbar.LENGTH_SHORT);
+        mySnackbar.show();
     }
 
     //    Create a color coded bitmap icon with magnitude value written on it.

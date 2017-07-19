@@ -46,7 +46,8 @@ public class EarthquakeListPresenter implements EarthquakeListContract.Presenter
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
 
 
-        Call<EarthquakeListData> data = apiInterface.getRecentEarthquakeList("44", "-9", "22", "55", "khay");
+        Call<EarthquakeListData> data = apiInterface.getRecentEarthquakeList("0", "100", "10", "100" ,
+                "20", "khay");
 
         data.enqueue(new Callback<EarthquakeListData>() {
             @Override
@@ -57,12 +58,12 @@ public class EarthquakeListPresenter implements EarthquakeListContract.Presenter
                 if (responeEarthquakeList != null)
                     mEarthquakeListView.showEarthquakeInfoList(responeEarthquakeList);
 
-                            }
+            }
 
 
             @Override
             public void onFailure(Call<EarthquakeListData> call, Throwable t) {
-                Snackbar mySnackbar = Snackbar.make(((EarthquakeListActivity )mContext).findViewById(R.id.snackbar_text),
+                Snackbar mySnackbar = Snackbar.make(((EarthquakeListActivity) mContext).findViewById(R.id.snackbar_text),
                         "Something went wrong, lets try that again.", Snackbar.LENGTH_SHORT);
                 mySnackbar.show();
 

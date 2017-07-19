@@ -13,6 +13,6 @@ import retrofit2.http.Query;
 public interface APIInterface {
 
     @GET("earthquakesJSON")
-    Call<EarthquakeListData> getRecentEarthquakeList(@Query("north") String north, @Query("south") String south, @Query("east") String east, @Query("west") String west, @Query("username") String username);
+    Call<EarthquakeListData> getRecentEarthquakeList(@Query("north") String north, @Query("south") String south, @Query("east") String east, @Query("west") String west, @Query("maxRows") String maxRows, @Query("username") String username);
 
 }

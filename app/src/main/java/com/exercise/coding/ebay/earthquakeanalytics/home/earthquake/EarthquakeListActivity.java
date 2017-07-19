@@ -1,5 +1,6 @@
 package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,8 +13,13 @@ import android.view.View;
 
 import com.exercise.coding.ebay.earthquakeanalytics.R;
 import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
+import com.exercise.coding.ebay.earthquakeanalytics.location.LocationAccessListener;
+import com.exercise.coding.ebay.earthquakeanalytics.location.LocationTracker;
 import com.exercise.coding.ebay.earthquakeanalytics.util.ActivityUtil;
 
+/**
+ * Created by kushahuja on 7/15/17.
+ */
 
 public class EarthquakeListActivity extends AppCompatActivity implements EarthquakeMapViewFragment.OnMapFragmentInteractionListener, EarthquakeListViewFragment.OnListFragmentInteractionListener {
 
@@ -74,9 +80,9 @@ public class EarthquakeListActivity extends AppCompatActivity implements Earthqu
         mEarthquakeMapPresenter = new EarthquakeListPresenter(earthquakeMapViewFragment);
 
 
-        Snackbar mySnackbar = Snackbar.make(findViewById(R.id.snackbar_text),
-                "Click on the marker to view details about that earthquake.", Snackbar.LENGTH_SHORT);
-        mySnackbar.show();
+
+
+
     }
 
 

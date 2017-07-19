@@ -16,6 +16,10 @@ import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
 import java.util.List;
 
 /**
+ * Created by kushahuja on 7/15/17.
+ */
+
+/**
  * A fragment representing a list of Items.
  * <p/>
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
