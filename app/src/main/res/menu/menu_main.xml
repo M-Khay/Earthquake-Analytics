@@ -3,8 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.exercise.coding.ebay.earthquakeanalytics.home.earthquake.EarthquakeListActivity">
     <item
-        android:id="@+id/about"
+        android:id="@+id/satellite"
         android:orderInCategory="100"
-        android:title="@string/action_about"
+        android:title="@string/satellite"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/normal"
+        android:orderInCategory="100"
+        android:title="@string/normal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/hybrid"
+        android:orderInCategory="100"
+        android:title="@string/hybrid"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/terrain"
+        android:orderInCategory="100"
+        android:title="@string/terrain"
         app:showAsAction="never" />
 </menu>

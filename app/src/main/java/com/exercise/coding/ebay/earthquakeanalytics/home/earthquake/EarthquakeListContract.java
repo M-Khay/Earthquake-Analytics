@@ -21,7 +21,7 @@ public interface EarthquakeListContract {
 
         public void showEarthquakeInfoList(List<Earthquake> items);
 
-
+        public void changeMapStyle(int mapView);
     }
 
     // Add methods here to add additional functionalities to the present.

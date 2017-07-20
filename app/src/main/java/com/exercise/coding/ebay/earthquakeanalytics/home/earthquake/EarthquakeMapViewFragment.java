@@ -34,10 +34,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.List;
 
-/**
- * Created by kushahuja on 7/15/17.
- */
-
 
 /**
  * Activities that contain this fragment must implement the
@@ -78,8 +74,6 @@ public class EarthquakeMapViewFragment extends Fragment implements EarthquakeLis
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         supportMapFragment.getMapAsync(this);
-
-
         return view;
     }
 
@@ -144,8 +138,6 @@ public class EarthquakeMapViewFragment extends Fragment implements EarthquakeLis
                     title.setText(marker.getTitle());
 
                     info.addView(title);
-//                    info.addView(snippet);
-
                     return info;
                 }
             });
@@ -158,6 +150,24 @@ public class EarthquakeMapViewFragment extends Fragment implements EarthquakeLis
         Snackbar mySnackbar = Snackbar.make(getActivity().findViewById(R.id.snackbar_text),
                 "Click on the marker to view details about that earthquake.", Snackbar.LENGTH_SHORT);
         mySnackbar.show();
+    }
+
+    @Override
+    public void changeMapStyle(int mapView) {
+        switch (mapView) {
+            case GoogleMap.MAP_TYPE_HYBRID:
+                map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                break;
+            case GoogleMap.MAP_TYPE_NORMAL:
+                map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                break;
+            case GoogleMap.MAP_TYPE_SATELLITE:
+                map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                break;
+            case GoogleMap.MAP_TYPE_TERRAIN:
+                map.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+                break;
+        }
     }
 
     //    Create a color coded bitmap icon with magnitude value written on it.

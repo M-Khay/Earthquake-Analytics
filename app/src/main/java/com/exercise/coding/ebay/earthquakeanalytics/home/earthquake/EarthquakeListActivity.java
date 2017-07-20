@@ -16,6 +16,7 @@ import com.exercise.coding.ebay.earthquakeanalytics.data.model.Earthquake;
 import com.exercise.coding.ebay.earthquakeanalytics.location.LocationAccessListener;
 import com.exercise.coding.ebay.earthquakeanalytics.location.LocationTracker;
 import com.exercise.coding.ebay.earthquakeanalytics.util.ActivityUtil;
+import com.google.android.gms.maps.GoogleMap;
 
 /**
  * Created by kushahuja on 7/15/17.
@@ -107,9 +108,20 @@ public class EarthquakeListActivity extends AppCompatActivity implements Earthqu
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        switch (id) {
+            case R.id.satellite:
+                earthquakeMapViewFragment.changeMapStyle(GoogleMap.MAP_TYPE_SATELLITE);
+                break;
+            case R.id.normal:
+                earthquakeMapViewFragment.changeMapStyle(GoogleMap.MAP_TYPE_NORMAL);
 
-        if (id == R.id.about) {
-            return true;
+                break;
+            case R.id.terrain:
+                earthquakeMapViewFragment.changeMapStyle(GoogleMap.MAP_TYPE_TERRAIN);
+                break;
+            case R.id.hybrid:
+                earthquakeMapViewFragment.changeMapStyle(GoogleMap.MAP_TYPE_HYBRID);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

@@ -51,12 +51,7 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
         holder.dateTime.setText("Date : " + mValues.get(position).getDatetime().substring(0, 10));
         holder.magnitude.setText("Magnitude : " + mValues.get(position).getMagnitude());
         new convertLatLngToCountryName().execute(holder);
-//      if(addresses !=null && addresses.size()!=0){
-//        holder.country.setText("Location : "+ addresses.get(0).getCountryName());
-//      }else{
-//          holder.country.setText("Location : "+ "View it on map");
-//
-//      }
+
         ColorCode colorCode = ActivityUtil.getColorCode(mValues.get(position).getMagnitude());
         switch (colorCode) {
             case YELLOW:
