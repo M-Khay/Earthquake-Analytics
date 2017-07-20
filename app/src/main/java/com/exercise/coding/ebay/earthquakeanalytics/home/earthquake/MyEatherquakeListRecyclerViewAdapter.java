@@ -3,6 +3,7 @@ package com.exercise.coding.ebay.earthquakeanalytics.home.earthquake;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
+import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,8 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
     private final List<Earthquake> mValues;
     private final EarthquakeListViewFragment.OnListFragmentInteractionListener mListener;
     private final Context mContext;
-    public MyEatherquakeListRecyclerViewAdapter(List<Earthquake> items, EarthquakeListViewFragment.OnListFragmentInteractionListener listener,Context context) {
+
+    public MyEatherquakeListRecyclerViewAdapter(List<Earthquake> items, EarthquakeListViewFragment.OnListFragmentInteractionListener listener, Context context) {
         mValues = items;
         mListener = listener;
         mContext = context;
@@ -45,19 +47,10 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
 
-        Geocoder geocoder;
-        List<Address> addresses = null;
-//        geocoder = new Geocoder(mContext, Locale.getDefault());
 
-//        try {
-//            addresses = geocoder.getFromLocation(mValues.get(position).getLat(), mValues.get(position).getLng(), 5); // Here 5 represent max location result to returned, by documents it recommended 1 to 5
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
-        holder.dateTime.setText("Date : "+ mValues.get(position).getDatetime().substring(0,10));
-        holder.magnitude.setText("Magnitude : "+ mValues.get(position).getMagnitude());
+        holder.dateTime.setText("Date : " + mValues.get(position).getDatetime().substring(0, 10));
+        holder.magnitude.setText("Magnitude : " + mValues.get(position).getMagnitude());
+        new convertLatLngToCountryName().execute(holder);
 //      if(addresses !=null && addresses.size()!=0){
 //        holder.country.setText("Location : "+ addresses.get(0).getCountryName());
 //      }else{
@@ -65,7 +58,7 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
 //
 //      }
         ColorCode colorCode = ActivityUtil.getColorCode(mValues.get(position).getMagnitude());
-        switch (colorCode){
+        switch (colorCode) {
             case YELLOW:
                 holder.mView.setBackgroundColor(mContext.getResources().getColor(R.color.yellow));
                 break;
@@ -95,16 +88,50 @@ public class MyEatherquakeListRecyclerViewAdapter extends RecyclerView.Adapter<M
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            dateTime= (TextView) view.findViewById(R.id.date_time);
-            magnitude= (TextView) view.findViewById(R.id.magnitude);
-            country= (TextView) view.findViewById(R.id.country);
+            dateTime = (TextView) view.findViewById(R.id.date_time);
+            magnitude = (TextView) view.findViewById(R.id.magnitude);
+            country = (TextView) view.findViewById(R.id.country);
 
 
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + dateTime.getText() + "'"+ " '" + magnitude.getText() + "'" + "'";
+            return super.toString() + " '" + dateTime.getText() + "'" + " '" + magnitude.getText() + "'" + "'";
+        }
+    }
+
+    private class convertLatLngToCountryName extends AsyncTask<ViewHolder, Void, List<Address>> {
+        ViewHolder holder;
+
+        @Override
+        protected List<Address> doInBackground(ViewHolder... params) {
+            holder = params[0];
+            Geocoder geocoder;
+            List<Address> addresses = null;
+            geocoder = new Geocoder(mContext, Locale.getDefault());
+
+            try {
+                addresses = geocoder.getFromLocation(holder.mItem.getLat(), holder.mItem.getLng(), 5); // Here 5 represent max location result to returned, by documents it recommended 1 to 5
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
+
+
+            return addresses;
+        }
+
+        @Override
+        protected void onPostExecute(List<Address> addresses) {
+
+            if (addresses != null && addresses.size() != 0) {
+                holder.country.setText("Location : " + addresses.get(0).getCountryName());
+            } else {
+                holder.country.setText("Location : " + "View it on map");
+            }
+
         }
     }
 }

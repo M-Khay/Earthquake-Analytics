@@ -46,8 +46,14 @@ public class LocationTracker implements LocationListener {
 
     public static final int ENABLE_GPS_ACTIVITY_CODE = 100;
 
+    private LocationTracker() {
+
+    }
+
     public static LocationTracker getInstance(Context context) {
+        if (locationTracker == null) {
             locationTracker = new LocationTracker(context);
+        }
         return locationTracker;
     }
 
@@ -71,9 +77,9 @@ public class LocationTracker implements LocationListener {
 
             isNetworkEnabled = locationManagerNetwork.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
-
             if (!isGPSEnabled && !isNetworkEnabled) {
                 if (showEnableLocationProviderPromt) {
+                    showEnableLocationProviderPromt = false;
                     enableGpsDialog();
                 } else {
                     locationAccessListener.onFailure();
@@ -101,7 +107,6 @@ public class LocationTracker implements LocationListener {
 
                 //if GPS Enabled get lat/long using GPS Services
                 if (isGPSEnabled) {
-
                     if (checkLocationAccessPermission()) {
                         if (GPSLocation == null) {
                             locationManagerGPS.requestLocationUpdates(
@@ -109,7 +114,6 @@ public class LocationTracker implements LocationListener {
                                     MIN_TIME_BW_UPDATES,
                                     MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
                         }
-
                         if (locationManagerGPS != null) {
                             GPSLocation = locationManagerGPS.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                             updateGPSCoordinates();
@@ -174,19 +178,14 @@ public class LocationTracker implements LocationListener {
     }
 
 
-    public void checkGPSEnable() {
-        LocationManager lm = (LocationManager) mContext.getSystemService(mContext.LOCATION_SERVICE);
-        if (!(lm.isProviderEnabled(LocationManager.GPS_PROVIDER))) {
-            enableGpsDialog();
-        }
-    }
-
     private void enableGpsDialog() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        builder.setMessage("Need to access your location, to show you best polls from your college and community. Press yes to enable.")
+        builder.setMessage("Need to access your location, to show you recent earthquake list near your location.")
                 .setCancelable(true)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        dialog.dismiss();
+
                         if (mContext instanceof AppCompatActivity) {
                             AppCompatActivity activity = (AppCompatActivity) mContext;
                             activity.startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), ENABLE_GPS_ACTIVITY_CODE);
@@ -195,7 +194,9 @@ public class LocationTracker implements LocationListener {
                             mContext.startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
                             dialog.dismiss();
                         }
+
                     }
+
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
@@ -213,6 +214,7 @@ public class LocationTracker implements LocationListener {
         ActivityCompat.requestPermissions((AppCompatActivity) mContext,
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
                 Constants.MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+
     }
 
 }

@@ -78,6 +78,8 @@ public class EarthquakeMapViewFragment extends Fragment implements EarthquakeLis
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         supportMapFragment.getMapAsync(this);
+
+
         return view;
     }
 

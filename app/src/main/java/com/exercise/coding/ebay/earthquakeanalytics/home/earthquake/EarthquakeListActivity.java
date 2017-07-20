@@ -64,7 +64,7 @@ public class EarthquakeListActivity extends AppCompatActivity implements Earthqu
                     mEarthquakeMapPresenter.hideView(earthquakeMapViewFragment);
 
                     fabChangeViewType.setImageResource(R.drawable.google_maps);
-                    toggleMapView =  false;
+                    toggleMapView = false;
                 } else {
                     fabChangeViewType.setImageResource(R.drawable.format_list_bulleted);
                     mEarthquakeListPresenter.showView(earthquakeMapViewFragment);
@@ -78,9 +78,6 @@ public class EarthquakeListActivity extends AppCompatActivity implements Earthqu
 //         Create the presenter
         mEarthquakeListPresenter = new EarthquakeListPresenter(earthquakeListViewFragment);
         mEarthquakeMapPresenter = new EarthquakeListPresenter(earthquakeMapViewFragment);
-
-
-
 
 
     }

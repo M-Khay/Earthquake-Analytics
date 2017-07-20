@@ -7,4 +7,5 @@ package com.exercise.coding.ebay.earthquakeanalytics.constant;
 public class Constants {
 
     public static final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 111;
+
 }
